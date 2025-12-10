@@ -134,8 +134,7 @@ pub fn part2(input: &Input) -> u64 {
         loop {
             let mut vs = String::new();
             for cv in c.values.iter() {
-                let cv_offset = max_val_len - cv.len();
-                match cv.chars().nth(max_val_len - cv_offset - 1 - i) {
+                match cv.chars().nth(max_val_len - i) {
                     Some(ch) => vs.push(ch),
                     None => ()
                 }
