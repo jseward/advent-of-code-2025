@@ -94,11 +94,6 @@ pub fn part1(input: &Input) -> u32 {
 
 #[aoc(day10, part2)]
 pub fn part2(input: &Input) -> u32 {
-    #[derive(PartialEq, Eq, Hash, Debug, Clone)]
-    struct MachineState {
-        levels : Vec<u32>,
-        num_pushes : u32
-    }
 
     let get_fewest_pushes = |machine: &Machine| {
         let mut primary_jolt_idx : Option<usize> = None;
@@ -117,7 +112,7 @@ pub fn part2(input: &Input) -> u32 {
         }
 
         // todo
-        
+
         0
     };
 
